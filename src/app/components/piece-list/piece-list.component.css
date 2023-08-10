@@ -1,0 +1,31 @@
+.piece-list {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .piece-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .piece {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .piece img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .piece span {
+    margin-top: 10px;
+  }
+
+  .piece.selected {
+    background-color: #f0f0f0; /* Przykładowy kolor tła dla wybranej figury */
+  }

@@ -1,0 +1,61 @@
+.chessboard-wrapper {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.chessboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;     
+    flex-direction: column;
+    width: 620px;
+    height: 620px;
+    border: 1px solid black;
+  }
+  
+  .row {
+    position: relative;
+    display: flex;
+    height: 12.5%;
+    width: 100%;
+  }
+  
+  .cell {
+    position: relative;
+    width: 12.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cell.selected {
+    border: 2px solid red; /* Przykładowy styl dla wybranego pola */
+  }
+
+  .black {
+    background-color: rgb(118, 160, 134);
+    color: white;
+  }
+  
+  .white {
+    background-color: white;
+  }
+
+  .cell-description {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding-top: 2px;
+    padding-right: 2px;
+  }
+
+  .cell img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+  }

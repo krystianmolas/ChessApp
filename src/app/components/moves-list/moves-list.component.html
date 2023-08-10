@@ -1,0 +1,18 @@
+<p>Rejestr ostatnich 10 ruchów </p>
+<table class="moves-table">
+    <thead>
+      <tr>
+        <th>Figura</th>
+        <th>Z pola</th>
+        <th>Na pole</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let move of moves">
+        <td>{{ move.piece }}</td>
+        <td>{{ move.from }}</td>
+        <td>{{ move.to }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

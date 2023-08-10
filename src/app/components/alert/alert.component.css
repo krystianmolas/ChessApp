@@ -1,0 +1,47 @@
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f44336; /* Czerwony kolor tła */
+    color: white; /* Biały kolor tekstu */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień */
+    z-index: 1000; 
+    max-width: 80%; /* Maksymalna szerokość alertu */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    font-size: larger;
+}
+
+/* Opcjonalne animacje dla alertu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+}
+
+.alert {
+    animation: fadeIn 0.3s forwards;
+}
+
+/* Możesz dodać klasę .fade-out do alertu, aby zastosować animację zanikania */
+.fade-out {
+    animation: fadeOut 0.3s forwards;
+}
