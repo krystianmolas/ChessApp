@@ -1,0 +1,15 @@
+<div class="chessboard-wrapper">
+<div class="chessboard">
+    <div *ngFor="let row of board; let i = index" class="row">
+        <div *ngFor="let cell of row; let j = index" 
+             [class]="isBlack(i, j) ? 'black' : 'white'" 
+             class="cell"
+             (click)="selectSquare(cell.square)"
+             [class.selected]="selectedSquare === cell.square">
+             <img *ngIf="cell.piece" [src]="'assets/pieces/' + cell.piece.toLowerCase() + '.png'" alt="{{cell.piece}}">
+            
+            
+        </div>
+      </div>
+  </div>
+</div>
