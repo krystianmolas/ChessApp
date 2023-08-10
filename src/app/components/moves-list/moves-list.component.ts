@@ -22,7 +22,7 @@ export class MovesListComponent implements OnInit {
         },
         error: error => {
           console.error("Wystąpił błąd podczas pobierania historii ruchów:", error);
-          this.alertService.showAlert('Nie udało się pobrać historii ruchów.');
+          this.alertService.showAlert('Nie udało się pobrać historii ruchów. Sprawdź połączenie z API');
         }
       });
   }

@@ -7,7 +7,7 @@ import { PieceListComponent } from './components/piece-list/piece-list.component
 import { ChessboardComponent } from './components/chessboard/chessboard.component';
 import { MovesListComponent } from './components/moves-list/moves-list.component';
 import { AlertComponent } from './components/alert/alert.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { AlertComponent } from './components/alert/alert.component';
     PieceListComponent,
     ChessboardComponent,
     MovesListComponent,
-    AlertComponent
+    AlertComponent,
     
   ],
   imports: [
