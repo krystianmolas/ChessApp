@@ -1,29 +1,14 @@
 <div class="piece-list">
-    <h2>Kliknij na figurę a następnie pole na szachownicy</h2>
-    <div class="piece-container">
-      <div class="piece" (click)="selectPiece('Rook', $event)">
-        <img src="assets/pieces/rook.png" alt="Rook" />
-        <span>Wieża</span>
-      </div>
-      <div class="piece" (click)="selectPiece('Knight', $event)">
-        <img src="./assets/pieces/knight.png" alt="Knight" />
-        <span>Skoczek</span>
-      </div>
-      <div class="piece" (click)="selectPiece('Bishop', $event)">
-        <img src="./assets/pieces/bishop.png" alt="Bishop" />
-        <span>Goniec</span>
-      </div>
-      <div class="piece" (click)="selectPiece('Pawn', $event)">
-        <img src="./assets/pieces/pawn.png" alt="Pawn" />
-        <span>Pionek</span>
-      </div>
-      <div class="piece" (click)="selectPiece('King', $event)">
-        <img src="./assets/pieces/king.png" alt="King" />
-        <span>Król</span>
-      </div>
-      <div class="piece" (click)="selectPiece('Queen', $event)">
-        <img src="./assets/pieces/queen.png" alt="Queen" />
-        <span>Królowa</span>
-      </div>
-    </div>
+  <h2>Kliknij na figurę a następnie pole na szachownicy</h2>
+  <div class="piece-container">
+    <div class="piece" *ngFor="let piece of pieces" (click)="selectPiece(piece.name, $event)">
+      <img [src]="piece.imagePath" alt="{{piece.name}}" />
+      <span>{{piece.name}}</span>
   </div>
+  
+  </div>
+</div>
+
+
+
+

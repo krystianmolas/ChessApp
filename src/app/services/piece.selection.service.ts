@@ -8,7 +8,9 @@ import { BehaviorSubject } from 'rxjs';
 export class PieceSelectionService {
   private _selectedPiece = new BehaviorSubject<string | null>(null);
   selectedPiece$ = this._selectedPiece.asObservable();
+  public lastSelectedSquare: string | null = null;
 
+  
   set selectedPiece(piece: string | null) {
     this._selectedPiece.next(piece);
   }

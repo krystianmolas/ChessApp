@@ -59,3 +59,37 @@
     margin: 0 auto;
     padding: 5px;
   }
+  .chessboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  width: 620px; 
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.row-labels {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  height: 620px; 
+  align-items: center;
+  font-weight: bold;
+  padding-right: 10px;
+  
+}
+.label {
+  width: 12.5%; 
+  height: 12.5%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  
+  
+}
