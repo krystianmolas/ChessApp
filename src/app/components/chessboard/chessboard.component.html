@@ -1,26 +1,40 @@
 <div class="chessboard-wrapper">
   <!-- Oznaczenia na górze szachownicy -->
   <div class="labels">
-      <div class="label" *ngFor="let label of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{ label }}</div>
+    <div
+      class="label"
+      *ngFor="let label of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']"
+    >
+      {{ label }}
+    </div>
   </div>
 
-  <div style="display: flex;">
-      <!-- Oznaczenia po lewej stronie szachownicy -->
-      <div class="row-labels">
-          <div class="label" *ngFor="let label of [1, 2, 3, 4, 5, 6, 7, 8]">{{ label }}</div>
+  <div style="display: flex">
+    <!-- Oznaczenia po lewej stronie szachownicy -->
+    <div class="row-labels">
+      <div class="label" *ngFor="let label of [1, 2, 3, 4, 5, 6, 7, 8]">
+        {{ label }}
       </div>
+    </div>
 
-      <!-- Aktualna szachownica -->
-      <div class="chessboard">
-          <div *ngFor="let row of board; let i = index" class="row">
-              <div *ngFor="let cell of row; let j = index" 
-                   [class]="isBlack(i, j) ? 'black' : 'white'" 
-                   class="cell"
-                   (click)="selectSquare(cell.square)"
-                   [class.selected]="selectedSquare === cell.square">
-                   <img *ngIf="cell.piece" [src]="cell.piece.imagePath" alt="{{cell.piece.name}}">
-                  </div>
-          </div>
+    <!-- Aktualna szachownica -->
+    <div class="chessboard">
+      <div *ngFor="let row of board; let i = index" class="row">
+        <div
+          *ngFor="let cell of row; let j = index"
+          [class]="isBlack(i, j) ? 'black' : 'white'"
+          class="cell"
+          [class.highlighted]="highlightedSquares.includes(cell.square)"
+          (click)="selectSquare(cell.square)"
+          [class.selected]="selectedSquare === cell.square"
+        >
+          <img
+            *ngIf="cell.piece"
+            [src]="cell.piece.imagePath"
+            alt="{{ cell.piece.name }}"
+          />
+        </div>
       </div>
+    </div>
   </div>
 </div>
