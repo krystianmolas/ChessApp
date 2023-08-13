@@ -1,8 +1,12 @@
+.moves-list {
+margin-left: 50px;
+}
 p {
     font-size:larger;
 
   }
 .moves-table {
+    
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #ddd;

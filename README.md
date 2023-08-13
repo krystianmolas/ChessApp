@@ -1,3 +1,10 @@
+Install node.js 
+
+# Install Angular
+
+npm install -g @angular/cli && npm update @angular-devkit/build-angular
+
+
 # ChessApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
