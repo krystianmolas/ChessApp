@@ -11,7 +11,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       state('in', style({ transform: 'translate(-50%, -50%)', opacity: 1 })),
       transition(':enter', [
         style({ transform: 'translate(-50%, -60%)', opacity: 0 }),
-        animate('1000ms ease-out')
+        animate('100ms ease-out')
       ]),
       transition(':leave', [
         animate('500ms ease-in', style({ transform: 'translate(-50%, -40%)', opacity: 0 }))

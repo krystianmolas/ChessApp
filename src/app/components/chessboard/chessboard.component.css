@@ -1,74 +1,73 @@
 .chessboard-wrapper {
-
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .chessboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;     
-    flex-direction: column;
-    width: 620px;
-    height: 620px;
-    border: 1px solid black;
-  }
-  
-  .row {
-    position: relative;
-    display: flex;
-    height: 12.5%;
-    width: 100%;
-  }
-  
-  .cell {
-    position: relative;
-    width: 12.5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 620px;
+  height: 620px;
+  border: 1px solid black;
+}
 
-  .cell.selected {
-    border: 2px solid red; /* Przykładowy styl dla wybranego pola */
-  }
+.row {
+  position: relative;
+  display: flex;
+  height: 12.5%;
+  width: 100%;
+}
 
-  .black {
-    background-color: rgb(118, 160, 134);
-    color: white;
-  }
-  
-  .white {
-    background-color: white;
-  }
+.cell {
+  position: relative;
+  width: 12.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .cell-description {
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    padding-top: 2px;
-    padding-right: 2px;
-  }
+.cell.selected {
+  border: 2px solid red; /* Przykładowy styl dla wybranego pola */
+}
 
-  .cell img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    padding: 5px;
-  }
-  .chessboard-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.black {
+  background-color: rgb(118, 160, 134);
+  color: white;
+}
+
+.white {
+  background-color: white;
+}
+
+.cell-description {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding-top: 2px;
+  padding-right: 2px;
+}
+
+.cell img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+}
+.chessboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .labels {
   display: flex;
   justify-content: space-between;
-  width: 620px; 
+  width: 620px;
   padding-bottom: 10px;
   padding-left: 10px;
 }
@@ -77,19 +76,21 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  height: 620px; 
+  height: 620px;
   align-items: center;
   font-weight: bold;
   padding-right: 10px;
-  
 }
 .label {
-  width: 12.5%; 
-  height: 12.5%; 
+  width: 12.5%;
+  height: 12.5%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  
-  
+}
+
+.highlighted {
+  background-color: rgba(152, 177, 206, 0.822); /* półprzezroczysty żółty */
+  border: 1px solid rgba(105, 105, 105, 0.363);
 }

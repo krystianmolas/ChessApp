@@ -27,6 +27,7 @@ export class PieceListComponent {
   }
 
   selectPiece(pieceName: string, event: any) {
+    
     this.selectedPiece = pieceName;
     this.pieceSelectionService.selectedPiece = pieceName; 
     console.log('Figura została kliknięta:', pieceName);
@@ -41,5 +42,6 @@ export class PieceListComponent {
 
     //Zresetuj wartość From
     this.pieceSelectionService.lastSelectedSquare = null;
+    this.pieceSelectionService.newPieceJustSelected.next(true);
   }
 }

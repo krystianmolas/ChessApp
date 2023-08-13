@@ -35,6 +35,10 @@ export class MovesService {
     );
   }
   
+  getValidMoves(pieceType: string, currentPosition: string): Observable<string[]> {
+    return this.http.get<string[]>(`${this.apiUrl}/valid-moves?pieceType=${pieceType}&currentPosition=${currentPosition}`);
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error); // Logowanie błędu do konsoli

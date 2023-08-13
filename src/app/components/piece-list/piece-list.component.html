@@ -1,5 +1,5 @@
 <div class="piece-list">
-  <h2>Kliknij na figurę a następnie pole na szachownicy</h2>
+  <h2>Kliknij na figurę a następnie pozycję startową na szachownicy</h2>
   <div class="piece-container">
     <div class="piece" *ngFor="let piece of pieces" (click)="selectPiece(piece.name, $event)">
       <img [src]="piece.imagePath" alt="{{piece.name}}" />
